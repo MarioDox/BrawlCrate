@@ -35,8 +35,6 @@ namespace BrawlLib.SSBB.ResourceNodes
         public float _victoryCamera3;   // 0x38 - Camera Distance
         public float _victoryCamera4;   // 0x3C - Camera Distance
 
-        public byte[] _victoryNameArray = new byte[32];
-
         [Category("Characters")]
         [DisplayName("Set Slot Characters")]
         public bool SetSlot

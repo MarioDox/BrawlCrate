@@ -32,8 +32,6 @@ namespace BrawlLib.SSBB.ResourceNodes
         public uint _unknown0x1C;       // 0x1C
         public string _victoryName;     // 0x20 - 32 characters
 
-        public byte[] _victoryNameArray = new byte[32];
-
         [Category("Character")]
         [DisplayName("Character Name")]
         public string CharacterName
@@ -196,7 +194,6 @@ namespace BrawlLib.SSBB.ResourceNodes
             {
                 _name = Path.GetFileNameWithoutExtension(_origPath);
             }
-            //_name = "Cosmetic" + _cosmeticID.ToString("X2") + " (" + _victoryName + ")";
 
             return false;
         }
