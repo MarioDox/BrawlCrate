@@ -11,7 +11,7 @@ namespace BrawlLib.SSBB.ResourceNodes
         public override ResourceType ResourceFileType => ResourceType.TBGD;
         public override Type SubEntryType => typeof(TBGDEntryNode);
 
-        protected override string GetName()
+        public override string GetName()
         {
             return base.GetName("Smashville Cameo Attributes");
         }

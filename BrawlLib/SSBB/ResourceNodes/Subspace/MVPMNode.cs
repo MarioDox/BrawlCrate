@@ -16,7 +16,7 @@ namespace BrawlLib.SSBB.ResourceNodes
             return Header->_count > 0;
         }
 
-        protected override string GetName()
+        public override string GetName()
         {
             return base.GetName("Movie Parameters");
         }

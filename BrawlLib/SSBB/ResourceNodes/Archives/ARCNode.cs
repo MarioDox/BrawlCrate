@@ -1050,7 +1050,7 @@ namespace BrawlLib.SSBB.ResourceNodes
             return redirectTargetNode;
         }
 
-        protected virtual string GetName()
+        public virtual string GetName()
         {
             if (!(Parent is ARCNode))
             {
@@ -1059,7 +1059,7 @@ namespace BrawlLib.SSBB.ResourceNodes
             return GetName(_fileType.ToString());
         }
 
-        protected virtual string GetName(string fileType)
+        public virtual string GetName(string fileType)
         {
             if (fileType.Length > 4 && !fileType.Contains(' '))
             {

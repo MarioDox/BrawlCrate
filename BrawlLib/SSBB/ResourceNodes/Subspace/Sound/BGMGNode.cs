@@ -9,7 +9,7 @@ namespace BrawlLib.SSBB.ResourceNodes
         public override ResourceType ResourceFileType => ResourceType.BGMG;
         internal BGMG* Header => (BGMG*) WorkingUncompressed.Address;
 
-        protected override string GetName()
+        public override string GetName()
         {
             return base.GetName("BGMG");
         }

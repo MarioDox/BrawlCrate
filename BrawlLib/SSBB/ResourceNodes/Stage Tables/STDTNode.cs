@@ -55,7 +55,7 @@ namespace BrawlLib.SSBB.ResourceNodes
             return false;
         }
 
-        protected override string GetName()
+        public override string GetName()
         {
             return base.GetName("Stage Trap Data Table");
         }

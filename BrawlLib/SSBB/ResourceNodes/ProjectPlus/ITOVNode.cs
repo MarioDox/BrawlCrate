@@ -30,7 +30,7 @@ namespace BrawlLib.SSBB.ResourceNodes.ProjectPlus
             }
         }
 
-        protected override string GetName()
+        public override string GetName()
         {
             return GetName("Item Override");
         }
@@ -671,7 +671,7 @@ namespace BrawlLib.SSBB.ResourceNodes.ProjectPlus
             set => Data._overrideDrWrightBuilding = value;
         }
 
-        protected override string GetName()
+        public override string GetName()
         {
             return GetName("Item Override");
         }

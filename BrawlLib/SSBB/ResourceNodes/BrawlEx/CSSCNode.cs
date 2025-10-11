@@ -262,7 +262,7 @@ namespace BrawlLib.SSBB.ResourceNodes
             return true;
         }
 
-        protected override string GetName()
+        public override string GetName()
         {
             if (!(Parent is ARCNode) && !string.IsNullOrEmpty(_origPath))
                 return Path.GetFileNameWithoutExtension(_origPath);

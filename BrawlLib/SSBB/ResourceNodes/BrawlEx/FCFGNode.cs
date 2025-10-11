@@ -1348,7 +1348,7 @@ PerCostumeSeparate: Use a single Motion for all costumes and give each costume i
             return false;
         }
 
-        protected override string GetName()
+        public override string GetName()
         {
             if (!(Parent is ARCNode) && !string.IsNullOrEmpty(_origPath))
                 return Path.GetFileNameWithoutExtension(_origPath);

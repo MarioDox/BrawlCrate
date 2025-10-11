@@ -57,7 +57,7 @@ namespace BrawlLib.SSBB.ResourceNodes
             return size;
         }
 
-        protected override string GetName()
+        public override string GetName()
         {
             return base.GetName("Pathing Data");
         }

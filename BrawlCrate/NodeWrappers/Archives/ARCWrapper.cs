@@ -515,7 +515,7 @@ namespace BrawlCrate.NodeWrappers
                         ((ARCEntryNode)n).FileType = ARCFileType.MiscData;
                     }
                     Resource.AddChild(n);
-                    n.Name = "Misc Data [0]";
+                    n.Name = ((ARCEntryNode) n).GetName();
 
                     BaseWrapper w = FindResource(n, false);
                     w.EnsureVisible();

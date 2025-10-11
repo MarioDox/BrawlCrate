@@ -39,7 +39,7 @@ namespace BrawlLib.SSBB.ResourceNodes
             }
         }
 
-        protected override string GetName()
+        public override string GetName()
         {
             return base.GetName("Stage Collision Attributes");
         }
