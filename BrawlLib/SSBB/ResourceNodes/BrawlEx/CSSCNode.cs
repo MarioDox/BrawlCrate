@@ -262,6 +262,13 @@ namespace BrawlLib.SSBB.ResourceNodes
             return true;
         }
 
+        protected override string GetName()
+        {
+            if (!(Parent is ARCNode) && !string.IsNullOrEmpty(_origPath))
+                return Path.GetFileNameWithoutExtension(_origPath);
+            return GetName("CSS Slot Data");
+        }
+
         internal static ResourceNode TryParse(DataSource source, ResourceNode parent)
         {
             return ((CSSC*) source.Address)->_tag == CSSC.Tag ? new CSSCNode() : null;

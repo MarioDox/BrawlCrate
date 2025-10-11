@@ -1,7 +1,9 @@
-﻿using BrawlLib.Internal;
-using BrawlLib.SSBB.Types.BrawlEx;
+﻿using System;
 using System.ComponentModel;
 using System.IO;
+using BrawlLib.CustomLists;
+using BrawlLib.Internal;
+using BrawlLib.SSBB.Types.BrawlEx;
 
 namespace BrawlLib.SSBB.ResourceNodes
 {
@@ -267,9 +269,15 @@ namespace BrawlLib.SSBB.ResourceNodes
             {
                 _name = Path.GetFileNameWithoutExtension(_origPath);
             }
-            //_name = "Cosmetic" + _cosmeticID.ToString("X2") + " (" + _victoryName + ")";
 
             return false;
+        }
+
+        protected override string GetName()
+        {
+            if (!(Parent is ARCNode) && !string.IsNullOrEmpty(_origPath))
+                return Path.GetFileNameWithoutExtension(_origPath);
+            return GetName("Slot Data");
         }
 
         internal static ResourceNode TryParse(DataSource source, ResourceNode parent)
