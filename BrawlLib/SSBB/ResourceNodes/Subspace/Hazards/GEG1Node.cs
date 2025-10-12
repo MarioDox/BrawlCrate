@@ -321,68 +321,70 @@ namespace BrawlLib.SSBB.ResourceNodes
             }
         }
 
-        [Category("Unknown")]
-        public float Unknown0x48
+        [Category("GEG1")]
+        public float InitialSpawnProbability
         {
-            get => Data._unknown0x48;
+            get => Data._initialSpawnProbability;
             set
             {
-                Data._unknown0x48 = value;
+                Data._initialSpawnProbability = value;
                 SignalPropertyChange();
             }
         }
 
-        [Category("Unknown")]
-        public float Unknown0x4C
+        [Category("GEG1")]
+        public float InitialSpawnDelayTimer
         {
-            get => Data._unknown0x4C;
+            get => Data._initialSpawnDelayTimer;
             set
             {
-                Data._unknown0x4C = value;
+                Data._initialSpawnDelayTimer = value;
                 SignalPropertyChange();
             }
         }
 
-        [Category("Unknown")]
-        public float Unknown0x50
+        [Category("GEG1")]
+        [Description("A random value between 0 and this is added to the spawn delay timer")]
+        public float InitialSpawnDelayTimerVariance
         {
-            get => Data._unknown0x50;
+            get => Data._initialSpawnDelayTimerVariance;
             set
             {
-                Data._unknown0x50 = value;
+                Data._initialSpawnDelayTimerVariance = value;
                 SignalPropertyChange();
             }
         }
 
-        [Category("Unknown")]
-        public uint Unknown0x54
+        [Category("GEG1")]
+        [Description("Double this amount is added to the spawn delay timer")]
+        public float InitialSpawnDelayTimerOffset
         {
-            get => Data._unknown0x54;
+            get => Data._initialSpawnDelayTimerOffset;
             set
             {
-                Data._unknown0x54 = value;
+                Data._initialSpawnDelayTimerOffset = value;
                 SignalPropertyChange();
             }
         }
 
-        [Category("Unknown")]
-        public float Unknown0x58
+        [Category("GEG1")]
+        public float SubsequentSpawnTimer
         {
-            get => Data._unknown0x58;
+            get => Data._subsequentSpawnTimer;
             set
             {
-                Data._unknown0x58 = value;
+                Data._subsequentSpawnTimer = value;
                 SignalPropertyChange();
             }
         }
 
-        [Category("Unknown")]
-        public float Unknown0x5C
+        [Category("GEG1")]
+        public float SubsequentSpawnProbability
         {
-            get => Data._unknown0x5C;
+            get => Data._subsequentSpawnProbability;
             set
             {
-                Data._unknown0x5C = value;
+                Data._subsequentSpawnProbability = value;
                 SignalPropertyChange();
             }
         }
@@ -398,35 +400,36 @@ namespace BrawlLib.SSBB.ResourceNodes
             }
         }
 
-        [Category("Unknown")]
-        public byte Unknown0x64
+        [Category("GEG1")]
+        [Description("Which difficulty table from adventure_common is used. 1 = SSE, 2 = Boss Battles")]
+        public byte DifficultyValueTableIndex
         {
-            get => Data._unknown0x64;
+            get => Data._difficultyValueTableIndex;
             set
             {
-                Data._unknown0x64 = value;
+                Data._difficultyValueTableIndex = value;
                 SignalPropertyChange();
             }
         }
 
-        [Category("Unknown")]
-        public byte Unknown0x65
+        [Category("GEG1")]
+        public byte MinimumSpawnDifficulty
         {
-            get => Data._unknown0x65;
+            get => Data._minimumSpawnDifficulty;
             set
             {
-                Data._unknown0x65 = value;
+                Data._minimumSpawnDifficulty = value;
                 SignalPropertyChange();
             }
         }
 
-        [Category("Unknown")]
-        public byte Unknown0x66
+        [Category("GEG1")]
+        public byte MaximumSpawns
         {
-            get => Data._unknown0x66;
+            get => Data._maximumSpawns;
             set
             {
-                Data._unknown0x66 = value;
+                Data._maximumSpawns = value;
                 SignalPropertyChange();
             }
         }
@@ -442,35 +445,36 @@ namespace BrawlLib.SSBB.ResourceNodes
             }
         }
 
-        [Category("Unknown")]
-        public byte Unknown0x68
+        [Category("GEG1")]
+        public bool CanRespawn
         {
-            get => Data._unknown0x68;
+            get => Data._canRespawn;
             set
             {
-                Data._unknown0x68 = value;
+                Data._canRespawn = value;
                 SignalPropertyChange();
             }
         }
 
-        [Category("Unknown")]
-        public byte Unknown0x69
+        [Category("GEG1")]
+        [Description("If the enemy is unloaded (for instance, when offscreen), will it despawn completely or will it be able to be reloaded?")]
+        public bool CanReload
         {
-            get => Data._unknown0x69;
+            get => Data._canReload;
             set
             {
-                Data._unknown0x69 = value;
+                Data._canReload = value;
                 SignalPropertyChange();
             }
         }
 
-        [Category("Unknown")]
-        public byte Unknown0x6A
+        [Category("GEG1")]
+        public bool UnloadWhenOffscreen
         {
-            get => Data._unknown0x6A;
+            get => Data._unloadWhenOffscreen;
             set
             {
-                Data._unknown0x6A = value;
+                Data._unloadWhenOffscreen = value;
                 SignalPropertyChange();
             }
         }
@@ -508,24 +512,24 @@ namespace BrawlLib.SSBB.ResourceNodes
             }
         }
 
-        [Category("Unknown")]
-        public byte Unknown0x74
+        [Category("GEG1")]
+        public byte RespawnCount
         {
-            get => Data._unknown0x74;
+            get => Data._respawnCount;
             set
             {
-                Data._unknown0x74 = value;
+                Data._respawnCount = value;
                 SignalPropertyChange();
             }
         }
 
-        [Category("Unknown")]
-        public byte Unknown0x75
+        [Category("GEG1")]
+        public byte RespawnOnlyIfRetriggered
         {
-            get => Data._unknown0x75;
+            get => Data._respawnOnlyIfRetriggered;
             set
             {
-                Data._unknown0x75 = value;
+                Data._respawnOnlyIfRetriggered = value;
                 SignalPropertyChange();
             }
         }
