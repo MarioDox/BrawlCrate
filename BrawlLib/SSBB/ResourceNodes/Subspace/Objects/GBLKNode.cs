@@ -22,68 +22,30 @@ namespace BrawlLib.SSBB.ResourceNodes
         internal GBLKEntry Data;
         public override ResourceType ResourceFileType => ResourceType.Unknown;
         
-        [Category("Unknown")]
-        public float Unknown0x00
+        [Category("GBLK")]
+        [TypeConverter(typeof(Vector3StringConverter))]
+        public Vector3 Position
         {
-            get => Data._unknown0x00;
+            get => new Vector3(Data._posX, Data._posY, Data._posZ);
             set
             {
-                Data._unknown0x00 = value;
+                Data._posX = value._x;
+                Data._posY = value._y;
+                Data._posZ = value._z;
                 SignalPropertyChange();
             }
         }
 
-        [Category("Unknown")]
-        public float Unknown0x04
+        [Category("GBLK")]
+        [TypeConverter(typeof(Vector3StringConverter))]
+        public Vector3 StretchOffset
         {
-            get => Data._unknown0x04;
+            get => new Vector3(Data._stretchX, Data._stretchY, Data._stretchZ);
             set
             {
-                Data._unknown0x04 = value;
-                SignalPropertyChange();
-            }
-        }
-
-        [Category("Unknown")]
-        public float Unknown0x08
-        {
-            get => Data._unknown0x08;
-            set
-            {
-                Data._unknown0x08 = value;
-                SignalPropertyChange();
-            }
-        }
-
-        [Category("Unknown")]
-        public float Unknown0x0C
-        {
-            get => Data._unknown0x0C;
-            set
-            {
-                Data._unknown0x0C = value;
-                SignalPropertyChange();
-            }
-        }
-
-        [Category("Unknown")]
-        public float Unknown0x10
-        {
-            get => Data._unknown0x10;
-            set
-            {
-                Data._unknown0x10 = value;
-                SignalPropertyChange();
-            }
-        }
-
-        [Category("Unknown")]
-        public float Unknown0x14
-        {
-            get => Data._unknown0x14;
-            set
-            {
-                Data._unknown0x14 = value;
+                Data._stretchX = value._x;
+                Data._stretchY = value._y;
+                Data._stretchZ = value._z;
                 SignalPropertyChange();
             }
         }
@@ -99,35 +61,46 @@ namespace BrawlLib.SSBB.ResourceNodes
             }
         }
 
-        [Category("Unknown")]
-        public byte Unknown0x1C
+        [Category("GBLK")]
+        public bool CanStretch
         {
-            get => Data._unknown0x1C;
+            get => Data._canStretch;
             set
             {
-                Data._unknown0x1C = value;
+                Data._canStretch = value;
                 SignalPropertyChange();
             }
         }
 
-        [Category("Unknown")]
-        public byte Unknown0x1D
+        [Flags]
+        public enum GblkHitbits : byte
         {
-            get => Data._unknown0x1D;
+            None = 0b0000,
+            Player = 0b0001,
+            Unknown = 0b0010,
+            Gimmicks = 0b0100,
+            SomeProjectiles = 0b1000,
+        }
+
+        [Category("GBLK")]
+        [Description("Disables destruction from these sources")]
+        public GblkHitbits HitBits
+        {
+            get => (GblkHitbits)Data._hitBits;
             set
             {
-                Data._unknown0x1D = value;
+                Data._hitBits = (byte)value;
                 SignalPropertyChange();
             }
         }
 
-        [Category("Unknown")]
-        public byte Unknown0x1E
+        [Category("GBLK")]
+        public bool Indestructable
         {
-            get => Data._unknown0x1E;
+            get => Data._indestructable;
             set
             {
-                Data._unknown0x1E = value;
+                Data._indestructable = value;
                 SignalPropertyChange();
             }
         }
@@ -220,24 +193,26 @@ namespace BrawlLib.SSBB.ResourceNodes
             }
         }
 
-        [Category("Unknown")]
-        public byte Unknown0x2A
+        [Category("GBLK")]
+        [Description("Respawn when reloading an area")]
+        public bool RespawnOnReload
         {
-            get => Data._unknown0x2A;
+            get => Data._respawnOnReload;
             set
             {
-                Data._unknown0x2A = value;
+                Data._respawnOnReload = value;
                 SignalPropertyChange();
             }
         }
 
-        [Category("Unknown")]
-        public byte Unknown0x2B
+        [Category("GBLK")]
+        [Description("Disables interactions with player hitboxes")]
+        public bool DisablePlayerHitboxInteraction
         {
-            get => Data._unknown0x2B;
+            get => Data._disablePlayerHitboxInteraction;
             set
             {
-                Data._unknown0x2B = value;
+                Data._disablePlayerHitboxInteraction = value;
                 SignalPropertyChange();
             }
         }
