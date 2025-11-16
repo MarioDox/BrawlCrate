@@ -754,13 +754,13 @@ namespace BrawlLib.SSBB.ResourceNodes
             }
         }
 
-        [Category("Unknown")]
-        public float Unknown0x6C
+        [Category("Item Parameters")]
+        public float FloorBounceMinSpeedX
         {
-            get => Data._unknown0x6C;
+            get => Data._floorBounceMinSpeedX;
             set
             {
-                Data._unknown0x6C = value;
+                Data._floorBounceMinSpeedX = value;
                 SignalPropertyChange();
             }
         }
