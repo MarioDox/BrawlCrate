@@ -1228,8 +1228,8 @@ namespace BrawlLib.SSBB.ResourceNodes
         public byte Flags0xB7 => Data._flags0xB7;
 
         [Category("Item Parameters")]
-        [Description("Set to true for things like Poké Balls and Crates")]
-        public bool SpawnsItem
+        [Description("Unaffected by the 4 max bounce limit and by the 25% chance of disappearing when bouncing off collision.")]
+        public bool UnlimitedBounce
         {
             get => Data._flags0xB7[0];
             set
